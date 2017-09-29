@@ -1,7 +1,11 @@
 {
   "name": "dog",
   "version": "1.0.0",
-  "description": "",
+  "description": "dog board game server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adisadi/dog.git"
+  },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,5 +14,8 @@
   "license": "ISC",
   "devDependencies": {
     "typescript": "^2.5.2"
+  },
+  "dependencies": {
+    "ws": "^3.2.0"
   }
 }
