@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" version="1.1" viewBox="0 0 21 21">
+    <style>
+        
+    </style>
+    <defs>
+    <style type="text/css">
+      <![CDATA[
+       .selHidden #selhole {
+            visibility:hidden;
+
+        }
+        .selVisible #selhole {
+            visibility:visible;
+        }
+      ]]>
+    </style>
+        <filter id="blurMe">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="0.06"/>
+        </filter>
+        <g id="hole" class="selHidden" >
+            <circle id="innerhole" cx="0.6" cy="0.6" r="0.3"  stroke-width="0.1"/>
+            <circle id="selhole" cx="0.6" cy="0.6" r="0.5" fill="none" stroke="yellow" stroke-width="0.1" filter="url(#blurMe)" />
+        </g>
+<!--comment-->
+    </defs>
+
+    <g id="board" stroke="black" fill="white">
+        <use index="0" x="0" y="8" xlink:href="#hole"/>
+        <use x="0" y="9" xlink:href="#hole"/>
+        <use x="0" y="10" xlink:href="#hole"/>
+        <use x="0" y="11" xlink:href="#hole"/>
+        <use x="0" y="12" stroke="blue" xlink:href="#hole"/>
+        <use x="1" y="12" xlink:href="#hole"/>
+        <use x="2" y="12" xlink:href="#hole"/>
+        <use x="3" y="12" xlink:href="#hole"/>
+        <use x="4" y="12" xlink:href="#hole"/>
+        <use x="5" y="13" xlink:href="#hole"/>
+        <use x="6" y="14" xlink:href="#hole"/>
+        <use x="7" y="15" xlink:href="#hole"/>
+        <use x="8" y="16" xlink:href="#hole"/>
+        <use x="8" y="17" xlink:href="#hole"/>
+        <use x="8" y="18" xlink:href="#hole"/>
+        <use x="8" y="19" xlink:href="#hole"/>
+        <use x="8" y="20" xlink:href="#hole"/>
+        <use x="9" y="20" xlink:href="#hole"/>
+        <use x="10" y="20" xlink:href="#hole"/>
+        <use x="11" y="20" xlink:href="#hole"/>
+        <use x="12" y="20" stroke="red" xlink:href="#hole"/>
+        <use x="12" y="19" xlink:href="#hole"/>
+        <use x="12" y="18" xlink:href="#hole"/>
+        <use x="12" y="17" xlink:href="#hole"/>
+        <use x="12" y="16" xlink:href="#hole"/>
+        <use x="13" y="15" xlink:href="#hole"/>
+        <use x="14" y="14" xlink:href="#hole"/>
+        <use x="15" y="13" xlink:href="#hole"/>
+        <use x="16" y="12" xlink:href="#hole"/>
+        <use x="17" y="12" xlink:href="#hole"/>
+        <use x="18" y="12" xlink:href="#hole"/>
+        <use x="19" y="12" xlink:href="#hole"/>
+        <use x="20" y="12" xlink:href="#hole"/>
+        <use x="20" y="11" xlink:href="#hole"/>
+        <use x="20" y="10" xlink:href="#hole"/>
+        <use x="20" y="9" xlink:href="#hole"/>
+        <use x="20" y="8" stroke="yellow" xlink:href="#hole"/>
+        <use x="19" y="8" xlink:href="#hole"/>
+        <use x="18" y="8" xlink:href="#hole"/>
+        <use x="17" y="8" xlink:href="#hole"/>
+        <use x="16" y="8" xlink:href="#hole"/>
+        <use x="15" y="7" xlink:href="#hole"/>
+        <use x="14" y="6" xlink:href="#hole"/>
+        <use x="13" y="5" xlink:href="#hole"/>
+        <use x="12" y="4" xlink:href="#hole"/>
+        <use x="12" y="3" xlink:href="#hole"/>
+        <use x="12" y="2" xlink:href="#hole"/>
+        <use x="12" y="1" xlink:href="#hole"/>
+        <use x="12" y="0" xlink:href="#hole"/>
+        <use x="11" y="0" xlink:href="#hole"/>
+        <use x="10" y="0" xlink:href="#hole"/>
+        <use x="9" y="0" xlink:href="#hole"/>
+        <use x="8" y="0" stroke="green" xlink:href="#hole"/>
+        <use x="8" y="1" xlink:href="#hole"/>
+        <use x="8" y="2" xlink:href="#hole"/>
+        <use x="8" y="3" xlink:href="#hole"/>
+        <use x="8" y="4" xlink:href="#hole"/>
+        <use x="7" y="5" xlink:href="#hole"/>
+        <use x="6" y="6" xlink:href="#hole"/>
+        <use x="5" y="7" xlink:href="#hole"/>
+        <use x="4" y="8" xlink:href="#hole"/>
+        <use x="3" y="8" xlink:href="#hole"/>
+        <use x="2" y="8" xlink:href="#hole"/>
+        <use x="1" y="8" xlink:href="#hole"/>
+    </g>
+    <g id="stack" fill="white">
+        <use x="2" y="14" style="stroke: blue;" xlink:href="#hole"/>
+        <use x="3" y="15" style="stroke: blue;" xlink:href="#hole"/>
+        <use x="4" y="16" style="stroke: blue;" xlink:href="#hole"/>
+        <use x="5" y="17" style="stroke: blue;" xlink:href="#hole"/>
+        <use x="14" y="18" style="stroke: red;" xlink:href="#hole"/>
+        <use x="15" y="17" style="stroke: red;" xlink:href="#hole"/>
+        <use x="16" y="16" style="stroke: red;" xlink:href="#hole"/>
+        <use x="17" y="15" style="stroke: red;" xlink:href="#hole"/>
+        <use x="18" y="6" style="stroke: yellow;" xlink:href="#hole"/>
+        <use x="17" y="5" style="stroke: yellow;" xlink:href="#hole"/>
+        <use x="16" y="4" style="stroke: yellow;" xlink:href="#hole"/>
+        <use x="15" y="3" style="stroke: yellow;" xlink:href="#hole"/>
+        <use x="6" y="2" style="stroke: green;" xlink:href="#hole"/>
+        <use x="5" y="3" style="stroke: green;" xlink:href="#hole"/>
+        <use x="4" y="4" style="stroke: green;" xlink:href="#hole"/>  
+        <use x="3" y="5" style="stroke: green;" xlink:href="#hole"/>
+     
+    </g>
+    <g id="heaven" fill="white">
+        <use x="2" y="10" style="stroke: blue;" xlink:href="#hole"/>
+        <use x="3" y="10" style="stroke: blue;" xlink:href="#hole"/>
+        <use x="4" y="10" style="stroke: blue;" xlink:href="#hole"/>
+        <use x="5" y="10" style="stroke: blue;" xlink:href="#hole"/>
+        <use x="10" y="18" style="stroke: red;" xlink:href="#hole"/>
+        <use x="10" y="17" style="stroke: red;" xlink:href="#hole"/>
+        <use x="10" y="16" style="stroke: red;" xlink:href="#hole"/>
+        <use x="10" y="15" style="stroke: red;" xlink:href="#hole"/>
+        <use x="18" y="10" style="stroke: yellow;" xlink:href="#hole"/>
+        <use x="17" y="10" style="stroke: yellow;" xlink:href="#hole"/>
+        <use x="16" y="10" style="stroke: yellow;" xlink:href="#hole"/>
+        <use x="15" y="10" style="stroke: yellow;" xlink:href="#hole"/>
+        <use x="10" y="2" style="stroke: green;" xlink:href="#hole"/>
+        <use x="10" y="3" style="stroke: green;" xlink:href="#hole"/>
+        <use x="10" y="4" style="stroke: green;" xlink:href="#hole"/>
+        <use x="10" y="5" style="stroke: green;" xlink:href="#hole"/>
+    </g>
+  
+</svg>
