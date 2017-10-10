@@ -3,61 +3,61 @@
 
 <head>
     <meta charset="utf-8">
+    <!-- dummy Symbol polyfill -->
+    <script>
+        if (typeof (Symbol) === "undefined") { window.Symbol = function (arg) { return arg; } }
+    </script>
+    <script src="https://unpkg.com/umbrellajs"></script>
+    <!-- <script src="./src/bundle.js"></script> -->
 </head>
 
 <body min-height="100%">
 
     <object id="board" data="board.svg" type="image/svg+xml" height="100%" width="100%">
     </object>
+   
     <script>
-        var exampleSocket = new WebSocket("ws://localhost:8080");
+        u("#board").on("load", function () {
+            let doc = this.contentDocument;
+            let svg = doc.documentElement;
+            u(svg).on("mousedown", mousedown, false);
+            u(svg).on("mouseup", mouseup, false);
+            u(svg).on("mousemove", mousemove, false);
 
-        exampleSocket.onopen = function (event) {
-            exampleSocket.send("Here's some text that the server is urgently awaiting!");
-        };
-
-        exampleSocket.onmessage = function (event) {
-            console.log(event.data);
-        }
-
-        document.getElementById("board").addEventListener("load", function () {
-            var doc = this.contentDocument;
-            doc.documentElement.addEventListener("mousedown", mousedown, false);
-            doc.documentElement.addEventListener("mouseup", mouseup, false);
-            doc.documentElement.addEventListener("mousemove", mousemove, false);
-
-            doc.documentElement.querySelector('use[index="0"]').setAttribute("fill", "pink");
-
+            u('use[index="0"]', svg).attr("fill", "pink");
         });
 
+        
         function mousedown(e) {
             console.log(e);
-
         }
 
         function mouseup(e) {
-
             console.log(e);
-            e.target.setAttribute("stroke", "pink");
+            u(e.target).attr("stroke", "pink");
         }
 
         function mousemove(e) {
             var element = e.target;
 
             disableAllSelHoles(element);
-            if (element && element.getAttribute("xlink:href") == "#hole") {
-                element.setAttribute("class", "selVisible");
+            if (element && u(element).attr("xlink:href") == "#hole" && u(element).attr("class") != "selVisible") {
+                u(element).attr("class", "selVisible");
+                console.log(u(element).attr("class"));
             }
         }
 
-
+        function getSVGElement() {
+            return u("#board").nodes[0].contentDocument.documentElement;
+        }
 
         function disableAllSelHoles(selElement) {
-            var selHoles = document.getElementById("board").contentDocument.documentElement.querySelectorAll('.selVisible');
-            selHoles.forEach(function (element) {
+            var selHoles = u('use.selVisible', getSVGElement());
+            console.log(selHoles);
+            selHoles.each(function (element) {
                 if (element !== selElement) {
                     element.setAttribute("class", "selHidden");
-                    console.log(element.getAttribute("class"));
+                    console.log(u(element).attr("class"));
                 }
             }, this);
         }

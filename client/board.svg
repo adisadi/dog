@@ -17,7 +17,7 @@
         <filter id="blurMe">
             <feGaussianBlur in="SourceGraphic" stdDeviation="0.06"/>
         </filter>
-        <g id="hole" class="selHidden" >
+        <g id="hole" class="selHidden">
             <circle id="innerhole" cx="0.6" cy="0.6" r="0.3"  stroke-width="0.1"/>
             <circle id="selhole" cx="0.6" cy="0.6" r="0.5" fill="none" stroke="yellow" stroke-width="0.1" filter="url(#blurMe)" />
         </g>
@@ -26,7 +26,7 @@
 
     <g id="board" stroke="black" fill="white">
         <use index="0" x="0" y="8" xlink:href="#hole"/>
-        <use x="0" y="9" xlink:href="#hole"/>
+        <use x="0" y="9" xlink:href="#hole" />
         <use x="0" y="10" xlink:href="#hole"/>
         <use x="0" y="11" xlink:href="#hole"/>
         <use x="0" y="12" stroke="blue" xlink:href="#hole"/>

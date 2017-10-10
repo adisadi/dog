@@ -1,0 +1,76 @@
+@import "../css/playcards/cards";
+@import "../css/playcards/cards-ie";
+@import "../css/playcards/cards-ie9";
+
+@import "../../node_modules/tingle.js/dist/tingle.min";
+
+@import url(http://fonts.googleapis.com/css?family=Lato:400,900);
+/* <-- Just for the demo, Yes I like pretty fonts... */
+
+.ring {
+    height: 100%;
+    width: 100%;
+    border: solid 3px black;
+    background: transparent;
+    border-radius: 100%;
+    display: inline-block;
+    margin: 0em;
+    position: relative;
+    text-align: center;
+    line-height: 200px;
+    color: white;
+    font-size: 2em;
+    /*box-shadow: 0 0 5px black, inset 0 0 5px #48a;*/
+}
+
+
+.square:hover .ring {
+    box-shadow: 0 0 5px orangered, inset 0 0 10px orangered !important;
+}
+
+/* div:before,
+div:after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    border: solid 5px transparent;
+    height: inherit;
+    width: inherit;
+    border-radius: inherit;
+} */
+
+/*.ring:before {
+    border-right-color: black;
+}*/
+
+.square {
+    float: left;
+    position: relative;
+    width: 4.7%;
+    padding-bottom: 4.7%;
+    /* = width for a 1:1 aspect ratio */
+    margin: 0;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.square > div {
+    position: absolute;
+    height: 90%;
+    /* = 100% - 2*5% padding */
+    width: 90%;
+    /* = 100% - 2*5% padding */
+    padding: 5%;
+}
+
+.square > div > div {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.square > div > div > div {
+    display: table-cell;
+    vertical-align: middle;
+}

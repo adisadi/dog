@@ -1,12 +1,12 @@
 
-import {Game} from './game';
-import {Player,Color} from './player';
-import {BallMove} from './board';
+import {Game} from './src/game/game';
+import {Player,Color} from './src/game/player';
+import {BallMove} from './src/game/board';
 
 let players:Array<Player>=[new Player("P1",Color.Blue,0),new Player("P2",Color.Green,1),new Player("P3",Color.Black,0),new Player("P4",Color.Red,1)];
 
 let game=new Game(players);
-game.nextRound();
+//game.nextRound();
 //console.log(game.toString());
 
 players.forEach(p=>{
