@@ -36,12 +36,13 @@ function bundle() {
         .pipe(gulp.dest("dist"));
 }
 
-gulp.task('styles', function() {
+gulp.task('styles', function(done) {
     gulp.src('src/sass/**/*.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('dist'));
+        done();
 });
 
-gulp.task("default", ["copy-html","copy-assets","styles"], bundle);
+gulp.task("default",gulp.series("copy-html","copy-assets","styles", bundle));
 watchedBrowserify.on("update", bundle);
 watchedBrowserify.on("log", gutil.log);
